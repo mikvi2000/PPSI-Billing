@@ -19,7 +19,7 @@ class ServiceFacilityDetail extends Migration
             $table->integer('transaction_id');
             $table->integer('service_facility_detail_amount');
             $table->integer('service_facility_detail_subtotal');
-            $table->string('service_facility_detail_notes', 50)->nullable()->change();
+            $table->string('service_facility_detail_notes', 50)->nullable();
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
 
@@ -35,6 +35,6 @@ class ServiceFacilityDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('service_facility_detail');
     }
 }

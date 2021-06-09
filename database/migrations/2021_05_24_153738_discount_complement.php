@@ -21,7 +21,7 @@ class DiscountComplement extends Migration
             $table->integer('discount_complement_amount');
             $table->integer('discount_complement_number_of_people');
             $table->integer('discount_complement_rank');
-            $table->string('discount_complement_notes', 50)->nullable()->change();
+            $table->string('discount_complement_notes', 50)->nullable();
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
 
@@ -36,6 +36,6 @@ class DiscountComplement extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('discount_complement');
     }
 }

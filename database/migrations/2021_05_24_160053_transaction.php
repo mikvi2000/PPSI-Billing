@@ -19,7 +19,7 @@ class Transaction extends Migration
             $table->string('employee_id', 7);
             $table->integer('transaction_total');
             $table->integer('transaction_poin_earned');
-            $table->string('transaction_notes', 50)->nullable()->change();
+            $table->string('transaction_notes', 50)->nullable();
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
 
@@ -35,6 +35,6 @@ class Transaction extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('transaction');
     }
 }

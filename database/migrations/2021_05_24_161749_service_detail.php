@@ -18,7 +18,7 @@ class ServiceDetail extends Migration
             $table->integer('service_id');
             $table->integer('transaction_id');
             $table->integer('service_detail_amount');
-            $table->integer('service_detail_discount')->nullable()->change();
+            $table->integer('service_detail_discount')->nullable();
             $table->integer('service_detail_subtotal');
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
@@ -35,6 +35,6 @@ class ServiceDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('service_detail');
     }
 }

@@ -18,7 +18,7 @@ class Payment extends Migration
             $table->integer('transaction_id');
             $table->string('payment_method');
             $table->integer('payment_amount');
-            $table->string('payment_notes', 50)->nullable()->change();
+            $table->string('payment_notes', 50)->nullable();
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
 
@@ -33,6 +33,6 @@ class Payment extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('payment');
     }
 }

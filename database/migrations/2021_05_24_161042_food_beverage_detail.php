@@ -18,7 +18,7 @@ class FoodBeverageDetail extends Migration
             $table->integer('food_beverage_id');
             $table->integer('transaction_id');
             $table->integer('food_beverage_detail_amount');
-            $table->integer('food_beverage_detail_discount')->nullable()->change();
+            $table->integer('food_beverage_detail_discount')->nullable();
             $table->integer('food_beverage_detail_subtotal');
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
@@ -35,6 +35,6 @@ class FoodBeverageDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('food_beverage_detail');
     }
 }

@@ -33,6 +33,6 @@ class ServiceFacility extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('service_facility');
     }
 }

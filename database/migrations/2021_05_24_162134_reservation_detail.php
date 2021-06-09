@@ -18,7 +18,7 @@ class ReservationDetail extends Migration
             $table->integer('reservation_id');
             $table->integer('transaction_id');
             $table->integer('reservation_detail_amount');
-            $table->integer('reservation_detail_room_discount')->nullable()->change();
+            $table->integer('reservation_detail_room_discount')->nullable();
             $table->integer('reservation_detail_subtotal');
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
@@ -35,6 +35,6 @@ class ReservationDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('reservation_detail');
     }
 }

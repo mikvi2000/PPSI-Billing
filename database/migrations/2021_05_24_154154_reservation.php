@@ -18,10 +18,10 @@ class Reservation extends Migration
             $table->integer('customer_id');
             $table->dateTime('date_checkin', $precision = 0);
             $table->dateTime('date_checkout', $precision = 0);
-            $table->integer('deposite_amount')->nullable()->change();
+            $table->integer('deposite_amount')->nullable();
             $table->string('reservation_status', 25);
-            $table->string('reservation_notes', 50)->nullable()->change();
-            $table->string('deposite_notes', 50)->nullable()->change();
+            $table->string('reservation_notes', 50)->nullable();
+            $table->string('deposite_notes', 50)->nullable();
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
 
@@ -36,6 +36,6 @@ class Reservation extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('reservation');
     }
 }

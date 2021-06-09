@@ -33,6 +33,6 @@ class RoomFacility extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('room_facility');
     }
 }

@@ -32,6 +32,6 @@ class PoinEarned extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('poin_earned');
     }
 }

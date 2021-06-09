@@ -15,7 +15,7 @@ class City extends Migration
     {
         Schema::create('city', function (Blueprint $table) {
             $table->string('city_id', 5);
-            $table->bigInteger('province_id');
+            $table->integer('province_id');
             $table->string('city_name', 50);
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);

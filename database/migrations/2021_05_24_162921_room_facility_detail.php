@@ -19,7 +19,7 @@ class RoomFacilityDetail extends Migration
             $table->integer('transaction_id');
             $table->integer('room_facility_detail_amount');
             $table->integer('room_facility_detail_subtotal');
-            $table->string('room_facility_detail_notes', 50)->nullable()->change();
+            $table->string('room_facility_detail_notes', 50)->nullable();
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
 
@@ -35,6 +35,6 @@ class RoomFacilityDetail extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('room_facility_detail');
     }
 }

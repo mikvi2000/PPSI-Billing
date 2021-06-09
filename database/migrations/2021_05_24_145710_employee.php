@@ -23,11 +23,11 @@ class Employee extends Migration
             $table->string('employee_education', 50);
             $table->string('employee_address', 50);
             $table->string('employee_number', 15);
-            $table->date('employee_birthdate')->nullable()->change();
+            $table->date('employee_birthdate')->nullable();
             $table->date('employee_joindate');
-            $table->string('employee_ktp', 16)->nullable()->change();
-            $table->string('employee_npwp', 15)->nullable()->change();
-            $table->integer('employee_salary', 16)->nullable()->change();
+            $table->string('employee_ktp', 16)->nullable();
+            $table->string('employee_npwp', 15)->nullable();
+            $table->integer('employee_salary')->nullable();
             $table->string('employee_status', 30);
             $table->string('employee_email', 50);
             $table->string('employee_password', 8);
@@ -47,6 +47,6 @@ class Employee extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('employee');
     }
 }
