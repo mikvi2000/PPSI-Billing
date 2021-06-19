@@ -37,13 +37,13 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="deposit.html">
                     <i class='bx bx-money'></i>
                     <span class="link_name">Deposit</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="history.html">
                     <i class='bx bx-history'></i>
                     <span class="link_name">Histori</span>
                 </a>
@@ -55,7 +55,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="tagihan.html">
                     <i class='bx bx-calendar-alt'></i>
                     <span class="link_name">Tagihan</span>
                 </a>
@@ -64,6 +64,12 @@
                 <a href="#">
                     <i class='bx bx-purchase-tag-alt'></i>
                     <span class="link_name">Diskon & Komplemen</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-log-out-circle'></i>
+                    <span class="link_name">Keluar</span>
                 </a>
             </li>
         </ul>
@@ -75,21 +81,10 @@
             <div class="sidebar-button">
                 <span class="dashboard">Dashboard</span>
             </div>
-            <div class="profile-details">
-                <a href="#">
-                    <img src="assets/img/profil.png" alt="">
+            <div class="profile-details" data-toggle="modal" data-target="#modalku">
+                <a>
+                    <img src="assets/img/Ellipse 1.svg" alt="">
                     <span class="admin_name">Jhon Doe</span>
-                    <i class='bx bx-chevron-down'></i>
-                    <!-- <ul class="sub-menu">
-                        <li>
-                            <i class='bx bx-user-circle'></i>
-                            <a href="#">Profil</a>
-                        </li>
-                        <li>
-                            <i class='bx bxs-log-out'></i>
-                            <a href="#">Logout</a>
-                        </li>
-                    </ul> -->
                 </a>
             </div>
         </nav>
@@ -132,14 +127,51 @@
             </div>
         </div>
         <div class="panel">
-            <div id="chartPoint"></div>
+            <div id="chartPoint">
+            </div>
         </div>
     </section>
 
-    <!-- Grafik -->
+    <!-- Modal Profile -->
+    <div class="modal fade" id="modalku">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
+                <!-- Ini adalah Bagian Header Modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Detail Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
 
+                <!-- Ini adalah Bagian Body Modal -->
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/img/Ellipse 2.svg" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Nama</label>
+                                    <input type="email" class="form-control" disabled id="exampleFormControlInput1"
+                                        placeholder="Jhon Doe">
+                                    <label for="exampleFormControlInput1">Email</label>
+                                    <input type="email" class="form-control" disabled id="exampleFormControlInput1"
+                                        placeholder="Jhondoe@example.com">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Ini adalah Bagian Footer Modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
