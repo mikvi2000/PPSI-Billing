@@ -7,6 +7,7 @@ Pembaharuan dan Penambahan
 3. Penamabhan File Deposite, tagihan, History, dan update tagihan jenis pembayaran
 4. Penambahan Menu Pada Sidebar yaitu Log Out
 5. Penambahan Css profile, deposite, tagihan, histori, dan update tagihan jenis pembayaran
+6. Ada penambahan assets file di image 
 
 
 
