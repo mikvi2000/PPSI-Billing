@@ -3,13 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\reservation;
+use App\Models\reservation;
 
 class ReservationController extends Controller
 {
+    public function HalamanDeposite(){
+        return view('deposit');
+    }
+
+    public function HalamanEditDeposite(){
+        return view('update_deposit');
+    }
+
+    public function HalamanHistory(){
+        return view('history');
+    }
+
     public function readDeposite(){
         $deposite = reservation::all();
-        //return
+        return $deposite;
     }
 
     public function updateDeposite(Request $request){

@@ -14,6 +14,6 @@ class discount_complement extends Model
     protected $keyType = 'integer';
 
     public function period(){
-        return $this->belongsTo(period:class);
+        return $this->belongsTo('App\Models\period', 'period_id');
     }
 }

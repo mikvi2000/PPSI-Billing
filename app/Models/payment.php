@@ -14,6 +14,6 @@ class payment extends Model
     protected $keyType = 'integer';
 
     public function transaction(){
-        return $this->belongsTo(transaction:class);
+        return $this->belongsTo('App\Models\transaction', 'transaction_id');
     }
 }

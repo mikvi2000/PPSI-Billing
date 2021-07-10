@@ -16,7 +16,7 @@ class ReservationDetail extends Migration
         Schema::create('reservation_detail', function (Blueprint $table) {
             $table->bigIncrements('reservation_detail_id');
             $table->integer('reservation_id');
-            $table->integer('transaction_id');
+            $table->integer('room_id');
             $table->integer('reservation_detail_amount');
             $table->integer('reservation_detail_room_discount')->nullable();
             $table->integer('reservation_detail_subtotal');
@@ -24,7 +24,7 @@ class ReservationDetail extends Migration
             $table->timestamp('updatedAt', $precision = 0);
 
             $table->foreign('reservation_id')->references('reservation_id')->on('reservation');
-            $table->foreign('transaction_id')->references('transaction_id')->on('transaction');
+            $table->foreign('room_id')->references('room_id')->on('room');
         });
     }
 

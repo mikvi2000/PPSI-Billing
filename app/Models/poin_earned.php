@@ -12,10 +12,10 @@ class poin_earned extends Model
     protected $table = 'poin_earned';
 
     public function customer(){
-        return $this->belongsTo(customer:class);
+        return $this->belongsTo('App\Models\customer', 'customer_id');
     }
 
     public function period(){
-        return $this->belongsTo(period:class);
+        return $this->belongsTo('App\Models\period', 'period_id');
     }
 }

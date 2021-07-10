@@ -14,11 +14,11 @@ class service extends Model
     protected $keyType = 'integer';
 
     public function service_detail(){
-        return $this->hasMany(service_detail:class);
+        return $this->hasMany('App\Models\service_detail', 'service_id');
     }
 
     public function service_facility(){
-        return $this->hasMany(service_facility:class);
+        return $this->hasMany('App\Models\service_facility', 'service_id');
     }
 
 }

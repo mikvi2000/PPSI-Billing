@@ -14,10 +14,10 @@ class period extends Model
     protected $keyType = 'integer';
 
     public function poin_earned(){
-        return $this->hasMany(poin_earned:class);
+        return $this->hasMany('App\Models\poin_earned', 'period_id');
     }
 
     public function discount_complement(){
-        return $this->hasMany(discount_complement:class);
+        return $this->hasMany('App\Models\discount_complement', 'period_id');
     }
 }

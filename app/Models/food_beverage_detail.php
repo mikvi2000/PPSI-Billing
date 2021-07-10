@@ -14,10 +14,10 @@ class food_beverage_detail extends Model
     protected $keyType = 'integer';
 
     public function transaction(){
-        return $this->belongsTo(transaction:class);
+        return $this->belongsTo('App\Models\transaction', 'transaction_id');
     }
 
     public function food_beverage(){
-        return $this->belongsTo(food_beverage:class);
+        return $this->belongsTo('App\Models\food_beverage', 'food_beverage_id');
     }
 }

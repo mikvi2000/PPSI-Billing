@@ -14,14 +14,14 @@ class city extends Model
     protected $keyType = 'string';
 
     public function province(){
-        return $this->belongsTo(province:class);
+        return $this->belongsTo('App\Models\province', 'province_id');
     }
 
     public function customer(){
-        return $this->hasMany(customer:class);
+        return $this->hasMany('App\Models\customer', 'city_id');
     }
 
     public function employee(){
-        return $this->hasMany(employee:class);
+        return $this->hasMany('App\Models\employee', 'city_id');
     }
 }

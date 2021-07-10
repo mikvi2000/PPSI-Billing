@@ -19,7 +19,8 @@ class Transaction extends Migration
             $table->string('employee_id', 7);
             $table->integer('transaction_total');
             $table->integer('transaction_poin_earned');
-            $table->string('transaction_notes', 50)->nullable();
+            $table->string('transaction_status', 255);
+            $table->string('transaction_notes', 255)->nullable();
             $table->timestamp('createdAt', $precision = 0);
             $table->timestamp('updatedAt', $precision = 0);
 

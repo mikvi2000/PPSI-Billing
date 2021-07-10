@@ -14,10 +14,10 @@ class employee extends Model
     protected $keyType = 'string';
 
     public function transaction(){
-        return $this->hasMany(transaction:class);
+        return $this->hasMany('App\Models\transaction');
     }
 
     public function city(){
-        return $this->belongsTo(city:class);
+        return $this->belongsTo('App\Models\city', 'city_id');
     }
 }

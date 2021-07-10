@@ -1,7 +1,7 @@
 @extends('Master')
 
 @section('title')
-    Deposhite
+    Home
 @endsection
 
 @section('content')

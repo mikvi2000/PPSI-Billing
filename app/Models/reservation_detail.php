@@ -13,11 +13,11 @@ class reservation_detail extends Model
     protected $primaryKey = 'reservation_detail_id';
     protected $keyType = 'integer';
 
-    public function room(){
-        return $this->belongsTo(room:class);
+    public function reservation(){
+        return $this->belongsTo('App\Models\reservation', 'reservation_id');
     }
 
-    public function transaction(){
-        return $this->belongsTo(transaction:class);
+    public function room(){
+        return $this->belongsTo('App\Models\room', 'room_id');
     }
 }

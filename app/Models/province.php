@@ -14,6 +14,6 @@ class province extends Model
     protected $keyType = 'integer';
 
     public function city(){
-        return $this->hasMany(city:class);
+        return $this->hasMany('App\Models\city', 'province_id');
     }
 }

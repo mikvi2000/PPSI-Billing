@@ -37,33 +37,39 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/deposite">
                     <i class='bx bx-money'></i>
                     <span class="link_name">Deposit</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/history">
                     <i class='bx bx-history'></i>
                     <span class="link_name">Histori</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/poinearned">
                     <i class='bx bx-coin'></i>
                     <span class="link_name">Poin Customer</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/tagihan">
                     <i class='bx bx-calendar-alt'></i>
                     <span class="link_name">Tagihan</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/discountcomplement">
                     <i class='bx bx-purchase-tag-alt'></i>
                     <span class="link_name">Diskon & Komplemen</span>
+                </a>
+            </li>
+            <li>
+                <a href="/login">
+                    <i class='bx bx-log-out-circle'></i>
+                    <span class="link_name">Keluar</span>
                 </a>
             </li>
         </ul>
@@ -100,7 +106,9 @@
                         <div class="box-topic">
                             Jumlah Transaksi
                         </div>
-                        <div class="number">50</div>
+                        @foreach ($datacol as $datacol)
+                        <div class="number">{{$datacol->transaksiaktif}}</div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="box">
@@ -181,14 +189,14 @@
                     borderWidth: 0,
                     dataLabels: {
                         enabled: true,
-                        format: '{point.y:.1f}%'
+                        format: '{point.y:.1f} poin'
                     }
                 }
             },
 
             tooltip: {
                 headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f} poin</b><br/>'
             },
 
             series: [

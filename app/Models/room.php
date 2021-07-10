@@ -14,10 +14,10 @@ class room extends Model
     protected $keyType = 'integer';
 
     public function reservation_detail(){
-        return $this->hasMany(reservation_detail:class);
+        return $this->hasMany('App\Models\reservation_detail', 'room_id');
     }
 
     public function room_facility(){
-        return $this->hasMany(room_facility:class);
+        return $this->hasMany('App\Models\room_facility', 'room_id');
     }
 }

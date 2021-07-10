@@ -14,18 +14,18 @@ class customer extends Model
     protected $keyType = 'integer';
 
     public function city(){
-        return $this->belongsTo(city:class);
+        return $this->belongsTo('App\Models\city', 'city_id');
     }
 
     public function reservation(){
-        return $this->hasMany(reservation:class);
+        return $this->hasMany('App\Models\reservation', 'customer_id');
     }
 
     public function poin_earned(){
-        return $this->hasMany(poin_earned:class);
+        return $this->hasMany('App\Models\poin_earned', 'customer_id');
     }
 
     public function transaction(){
-        return $this->hasMany(transaction:class);
+        return $this->hasMany('App\Models\transaction', 'customer_id');
     }
 }

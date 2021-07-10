@@ -13,11 +13,15 @@ class reservation extends Model
     protected $primaryKey = 'reservation_id';
     protected $keyType = 'integer';
 
+    public function transaction(){
+        return $this->belongsTo('App\Models\transaction', 'transaction_id');
+    }
+
     public function customer(){
-        return $this->belongsTo(customer:class);
+        return $this->belongsTo('App\Models\customer', 'customer_id');
     }
 
     public function reservation_detail(){
-        return $this->hasMany(reservation_detail:class);
+        return $this->hasMany('App\Models\reservation_detail', 'reservation_id');
     }
 }

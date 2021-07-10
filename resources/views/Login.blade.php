@@ -12,11 +12,11 @@
 	<link rel="stylesheet" href="{{ asset('other/bootstrap/css/bootstrap.css') }}">
 
 	<!-- CSS Manual -->
-	<link rel="stylesheet" type="{{ asset('frontend/style/css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('frontend/style/css/style.css') }}">
 
 
 	<!-- JS Boostrap -->
-	<script src="{{ asset('other/bootstrap/jquery.css') }}"></script>
+	<script src="{{ asset('other/bootstrap/jquery.js') }}"></script>
 	<script src="{{ asset('other/bootstrap/js/bootstrap.js') }}"></script>
 </head>
 
@@ -90,7 +90,7 @@
 					</div>
 					<div class="form-row">
 						<div class="col-lg-7">
-							<a href="masterdashboard.html"><button type="button" class="btn1">Login</button></a>
+							<a href="/home"><button type="button" class="btn1">Login</button></a>
 						</div>
 					</div>
 				</form>

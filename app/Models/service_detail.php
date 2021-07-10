@@ -14,10 +14,10 @@ class service_detail extends Model
     protected $keyType = 'integer';
 
     public function transaction(){
-        return $this->belongsTo(transaction:class);
+        return $this->belongsTo('App\Models\transaction', 'transaction_id');
     }
 
     public function service(){
-        return $this->belongsTo(service:class);
+        return $this->belongsTo('App\Models\service', 'service_id');
     }
 }

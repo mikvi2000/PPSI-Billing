@@ -14,10 +14,10 @@ class room_facility extends Model
     protected $keyType = 'integer';
 
     public function room_facility_detail(){
-        return $this->hasMany(room_facility_detail:class);
+        return $this->hasMany('App\Models\room_facility_detail', 'room_facility_id');
     }
 
     public function room(){
-        return $this->belongsTo(room:class);
+        return $this->belongsTo('App\Models\room', 'room_id');
     }
 }

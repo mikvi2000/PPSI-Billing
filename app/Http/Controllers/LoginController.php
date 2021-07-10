@@ -10,7 +10,7 @@ class LoginController extends Controller
         return view('Login');
     }
 
-    public function HalamanDeposite(){
-        return view('Deposite');
+    public function HalamanUtama(){
+        return view('HalamanUtama');
     }
 }
